@@ -1,8 +1,11 @@
-<h1> <%= @restaurants.name %> </h1>
-<p> <%= @restaurants.address %> </p>
-<p> <%= @restaurants.category %> </p>
-<p> <%= @restaurants.phone_number %> </p>
+<div class="container">
 
+  <h1> <%= @restaurants.name %> </h1>
+  <hr>
+  <p> <%= @restaurants.address %> </p>
+  <p> <%= @restaurants.category %> </p>
+  <p> <%= @restaurants.phone_number %> </p>
+  <hr>
+  <%= link_to "Back to Restaurants", restaurants_path %>
 
-
-<%= link_to "Back to Restaurants", restaurants_path %>
+</div>

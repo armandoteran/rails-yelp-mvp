@@ -1,8 +1,11 @@
-<h1>Restaurants</h1>
-
-<% @restaurants.each do |restaurant| %>
-
-<%= link_to restaurant.name, show_path(restaurant)%>
-<% end %>
-
-<%= link_to "+ Add new restaurant", new_path %>
+<div class="container">
+  <h1>Restaurants</h1>
+  <hr>
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-sm-6,mt-6,mb-3">
+      <%= link_to restaurant.name, show_path(restaurant)%>
+    </div>
+  <% end %>
+  <hr>
+  <%= link_to "+ Add new restaurant", new_path %>
+</div>
