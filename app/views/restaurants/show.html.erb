@@ -6,8 +6,8 @@
   <p> <%= @restaurant.category %> </p>
   <p> <%= @restaurant.phone_number %> </p>
 
-  <% @restaurant.reviews do |review| %>
-    <p> <% review.content %> </p>
+  <% @restaurant.reviews.each do |review| %>
+    <p> <%= review.content %> </p>
   <% end %>
 
   <hr>
