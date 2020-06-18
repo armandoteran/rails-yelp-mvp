@@ -1,0 +1,14 @@
+<div class="container">
+
+  <hr>
+
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, placeholder: 'Highly recommended' %>
+  <%= f.input :rating, placeholder: 'min: 0 (poor), max: 5 (great)' %>
+  <%= f.submit class:'btn btn-primary' %>
+  <% end %>
+
+  <hr>
+  <%= link_to "⟲ Back to Restaurants", restaurants_path %>
+
+</div>

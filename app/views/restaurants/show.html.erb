@@ -1,11 +1,17 @@
 <div class="container">
 
-  <h1> <%= @restaurants.name %> </h1>
+  <h1> <%= @restaurant.name %> </h1>
   <hr>
-  <p> <%= @restaurants.address %> </p>
-  <p> <%= @restaurants.category %> </p>
-  <p> <%= @restaurants.phone_number %> </p>
+  <p> <%= @restaurant.address %> </p>
+  <p> <%= @restaurant.category %> </p>
+  <p> <%= @restaurant.phone_number %> </p>
+
+  <% @restaurant.reviews do |review| %>
+    <p> <% review.content %> </p>
+  <% end %>
+
   <hr>
-  <%= link_to "Back to Restaurants", restaurants_path %>
+  <%= link_to "⟲ Back to Restaurants", restaurants_path %> |
+  <%= link_to "+ Add review", new_review_path(@restaurant) %>
 
 </div>
